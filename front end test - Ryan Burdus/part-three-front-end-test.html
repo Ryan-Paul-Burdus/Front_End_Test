@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS layout</title>
+    <style>
+        /* This styling will be used if the page is smaller then 960px */
+        @media screen and (max-width: 960px) {
+            .hello{
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+        }
+        
+        /* This styling will be used if the page is larger then 960px */
+        @media screen and (min-width: 960px) {
+            .hello{
+                display: flex;
+                justify-content: space-between;
+            }
+            .item1{
+                width: 20%;
+            }
+            .item2{
+                width: 40%;
+            }
+            .item3{
+                width: 10%;
+            }
+            .item4{
+                width: 20%;
+            }
+            .item5{
+                width: 10%;
+            }
+        }
+        span{
+            background-color: cornflowerblue;
+            margin: 1%;
+            padding-bottom: 5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is some fake data in the format that the test required-->
+	<ul class="hello">
+			<span class="item1">date</span>
+			<span class="item2">subject</span>
+			<span class="item3">from</span>
+			<span class="item4">Attachments</span>
+			<span class="item5">Type</span>
+	</ul>
+    
+</body>
+</html>
